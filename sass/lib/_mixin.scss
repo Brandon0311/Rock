@@ -1,0 +1,55 @@
+@mixin seccion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+
+    @media #{$media-celular}{
+        flex-direction: column; 
+        height: 80vh;       
+    } 
+}
+
+@mixin imagen {
+    width: 30%;
+    @media #{$media-celular} {
+        width: 70%;
+        text-align: center;
+    }
+
+    img{
+        width: $acho-imagen;
+        height: $alto-imagen;
+        border-radius: 50%;
+
+        @media #{$media-celular} {
+            width: $acho-imagen - 150px;
+            height: $alto-imagen - 150px;
+        }
+    }
+}
+
+@mixin parrafo {
+    width: 30%;
+    @media #{$media-celular} {
+        width: 80%;
+    }
+
+    h2{
+        font-size: $letra-h2;
+        @media #{$media-celular} {
+            font-size: $letra-h2 - 15px;
+        }
+    }
+    p{
+        font-size: $letra-p;
+        @media #{$media-celular} {
+            font-size:$letra-p - 15px;
+        }
+    } 
+       
+}
+
+
+
+
